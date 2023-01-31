@@ -3,7 +3,7 @@ let quote_btn = document.querySelector("#quote_btn");
 quote_btn.addEventListener("click", ()=>{
     quote_btn.textContent = "Loading Quote...";
     quote_btn.style.opacity = "0.6";
-    fetch("https://api.quotable.io//random").then((result) => {
+    fetch("https://api.quotable.io/random").then((result) => {
         let Data = result.json();
         return Data
     }).then((quote) => {
