@@ -72,15 +72,10 @@ copy_btn.addEventListener("click", () => {
     navigator.clipboard.writeText(quote_text);
     document.querySelector("#copy_before").style.opacity = 1;
     document.querySelector("#copy_after").style.opacity = 1;
-    let i = 0;
-    let interval = setInterval(()=>{
-        i++;
-        if (i == 2){
-            document.querySelector("#copy_before").style.opacity = 0;
-            document.querySelector("#copy_after").style.opacity = 0;
-            clearInterval(interval);
-        }
-    }, 1000)
+    setTimeout(()=>{
+        document.querySelector("#copy_before").style.opacity = 0;
+        document.querySelector("#copy_after").style.opacity = 0;
+    }, 2500)
 })
 
 let tweet_btn = document.querySelector("#twitter");
