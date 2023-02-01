@@ -98,7 +98,7 @@ function onLine(){
     document.querySelector("#message-text").textContent = "Hurray! internet is connected";
     setTimeout(()=>{
         document.querySelector(".message").style.animation = "fade_out 1s 1";
-    }, 2000 )
+    }, 3000 )
 }
 
 function offLine(){
@@ -108,7 +108,7 @@ function offLine(){
     document.querySelector("#message-text").textContent = "Opps! internet is disconneted";
     setTimeout(()=>{
         document.querySelector(".message").style.animation = "fade_in 1s 1 forwards";
-    }, 2000)
+    }, 3000)
 }
 
 window.onload = ()=>{
