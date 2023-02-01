@@ -10,6 +10,7 @@ body{
     height: 100vh;
     background: linear-gradient(155deg,#00CC99, #6600FF) no-repeat;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 main{
@@ -202,4 +203,77 @@ main{
 
 #quote_btn:hover{
     background-color: #723dc1;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 15px;
+    border-left: 5px solid #2ecc71;
+    opacity: 0.5;
+    transform: translateX(70vw);
+    animation: fade_in 1s 1 forwards;
+}
+
+.message .ico{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #2ecc71;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.message .ico img{
+    width: 30px;
+    height: 30px;
+}
+
+.message .text{
+    margin-right: 15px;
+}
+
+.message .text p{
+    color: #878787;
+}
+
+.message #close{
+    background-color: #f2f2ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@keyframes fade_in {
+    0%{
+        opacity: 0.5;
+        transform: translateX(70vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade_out {
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100%{
+        opacity: 0.5;
+        transform: translateX(70vw);
+    }
 }
