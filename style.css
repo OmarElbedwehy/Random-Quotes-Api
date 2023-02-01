@@ -94,6 +94,99 @@ main{
     color: #fff;
 }
 
+#copy{
+    position: relative;
+}
+
+#copy_before{
+    position: absolute;
+    top: -45px;
+    left: -35%;
+    background-color: #000;
+    color: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    opacity: 0;
+    user-select: none;
+    transition: 0.3s;
+}
+
+#copy_after{
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    top: -14px;
+    opacity: 0;
+    user-select: none;
+    transition: 0.3s;
+}
+
+#speak{
+    position: relative;
+}
+
+#speak_before{
+    position: absolute;
+    top: -45px;
+    left: -45%;
+    background-color: #000;
+    color: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    opacity: 0;
+    user-select: none;
+    transition: 0.3s;
+}
+
+#speak_after{
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    top: -14px;
+    opacity: 0;
+    user-select: none;
+    transition: 0.3s;
+}
+
+#twitter{
+    position: relative;
+}
+
+#twitter_before{
+    position: absolute;
+    top: -45px;
+    left: -103%;
+    background-color: #000;
+    color: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    opacity: 0;
+    user-select: none;
+    transition: 0.3s;
+    width: 105px;
+}
+
+#twitter_after{
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #000 transparent transparent transparent;
+    top: -14px;
+    opacity: 0;
+    user-select: none;
+    transition: 0.3s;
+}
+
+#twitter:hover #twitter_before{
+    opacity: 1;
+}
+
+#twitter:hover #twitter_after{
+    opacity: 1;
+}
+
 #quote_btn{
     background-color: #7e3be3;
     padding: 15px 23px;
