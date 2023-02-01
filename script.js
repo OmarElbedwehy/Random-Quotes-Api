@@ -90,3 +90,45 @@ tweet_btn.addEventListener("click", () => {
     let tweet_url = `https://twitter.com/intent/tweet?url=${quote_text}`;
     window.open(tweet_url, "_blank");
 })
+
+function onLine(){
+    document.querySelector(".message .ico").innerHTML = `<i class="fa-solid fa-wifi"></i>`;
+    document.querySelector(".message .ico").style.backgroundColor = "#2ecc71";
+    document.querySelector("#message-title").textContent = "You're online now";
+    document.querySelector("#message-text").textContent = "Hurray! internet is connected";
+    setTimeout(()=>{
+        document.querySelector(".message").style.animation = "fade_out 1s 1";
+    }, 2000 )
+}
+
+function offLine(){
+    document.querySelector(".message .ico").innerHTML = `<img src="./wi-fi-off.png" alt="">`;
+    document.querySelector(".message .ico").style.backgroundColor = "#ccc";
+    document.querySelector("#message-title").textContent = "You're offline now";
+    document.querySelector("#message-text").textContent = "Opps! internet is disconneted";
+    setTimeout(()=>{
+        document.querySelector(".message").style.animation = "fade_in 1s 1 forwards";
+    }, 2000)
+}
+
+window.onload = ()=>{
+    if (window.navigator.onLine){
+        onLine()
+    }else{
+        offLine()
+    }
+}
+
+setInterval(()=>{
+    if (window.navigator.onLine){
+        onLine()
+    }else{
+        offLine()
+    }
+}, 500);
+
+let close_msg = document.querySelector("#close");
+
+close_msg.addEventListener("click", ()=>{
+    document.querySelector(".message").style.animation = "fade_out 1s 1 forwards";
+})
